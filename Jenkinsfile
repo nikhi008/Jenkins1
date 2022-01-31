@@ -6,13 +6,13 @@ agent any
   stages {
     stage('test') {
       steps {
-        bat 'mvn --version'
+        bat 'mvn compile'
       }
     }
 
     stage('build') {
       steps {
-        echo 'test stage'
+        bat 'mvn test'
       }
     }
 
